@@ -26,7 +26,11 @@ public class Arbitro extends Persona{
      
     public String toString(){
     public String categoria1 = categoria==1? "Principal":"Asistente";
+
+    public Object getNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     return "\n Arbitro: "+ categoria1+"\nNombre"+getNombre() + "\nNacionalidad"+getNacionalidad() +
                 "\nFechaNacimiento"+getFechaNacimiento()+
     }
-}
+    }
