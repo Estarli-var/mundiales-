@@ -3,12 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package arbitros;
-
 /**
  *
  * @author Student
  */
-public class Arbitro {
+public class Arbitro extends Persona{
         private int categoria;
         
     public int getCategoria() {
@@ -20,9 +19,14 @@ public class Arbitro {
     public Arbitro(int categoria) {
         this.categoria = categoria;
     }
-   @Override
+    
+     public Arbitro(String nombre, String nacionalidad, LocalDate fechaNacimiento) {
+        super(nombre, nacionalidad, fechaNacimiento);
+    }
+     
     public String toString(){
     public String categoria1 = categoria==1? "Principal":"Asistente";
-    return "\n Arbitro: "+ categoria1+
+    return "\n Arbitro: "+ categoria1+"\nNombre"+getNombre() + "\nNacionalidad"+getNacionalidad() +
+                "\nFechaNacimiento"+getFechaNacimiento()+
     }
 }
