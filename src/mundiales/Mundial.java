@@ -6,6 +6,7 @@ package mundiales;
 
 import java.time.LocalDate;
 import selecciones.Seleccion;
+import partidos.Partido;
 /**
  *
  * @author Student
@@ -15,7 +16,9 @@ public class Mundial {
    private LocalDate año;
    private String pais; 
    private String seleccion; 
-   private String partidos; 
+   private Partido partidos; 
+   private Partido partidosr; 
+   
 
     public String getNombre() {
         return nombre;
@@ -33,30 +36,30 @@ public class Mundial {
         return seleccion;
     }
 
-    public String getPartidos() {
+    public Partido getPartidos() {
         return partidos;
+    }
+    public Partido getPartidosr() {
+        return partidosr;
     }
 
     public void setAño(LocalDate año) {
         this.año = año;
     }
-
-    public Mundial(String nombre, LocalDate año, String pais, Seleccion Nseleccion, String partidos) {
-        this.nombre = nombre;
-        this.año = año;
-        this.pais = pais;
-        this.seleccion = Nseleccion.getNombre();
-        this.partidos = partidos;
-    }
+    
+    public Mundial(String nombre, LocalDate año, String pais, Seleccion Nseleccion, Partido partidos, Partido partidosr) {
+    this.nombre = nombre;
+    this.año = año;
+    this.pais = pais;
+    this.seleccion = Nseleccion.getNombre();
+    this.partidos = partidos; 
+    this.partidosr = partidosr;       
+}
 
     
 
     @Override
     public String toString() {
-        return "Mundial{" + "nombre=" + nombre + ", año=" + año + ", pais=" + pais + ", seleccion=" + seleccion+ ", partidos=" + partidos + '}';
+        return "Mundial{" + "nombre=" + nombre + ", año=" + año + ", pais=" + pais + ", seleccion=" + seleccion+ ", equipo A=" + partidos + "equipo B= "+partidosr ;
     }
-    
-    
-   
-   
 }
