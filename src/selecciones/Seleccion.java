@@ -17,21 +17,27 @@ public class Seleccion {
     public String getNombre() {
         return nombre;
     }
+    
     public String getGrupo() {
         return grupo;
     }
+    
     public int getEntrenadores() {
         return entrenadores;
     }
+    
     public static String[] getJugadores() {
         return jugadores;
     }
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
     public void setEntrenadores(int entrenadores) {
         this.entrenadores = entrenadores;
     }
+    
    public void agregarJugador(String nombre){
        if(jugadores.length == contaJugador){
            System.out.println("No ahi espacio disponible");
@@ -40,6 +46,7 @@ public class Seleccion {
        jugadores[contaJugador] = nombre;
        contaJugador++;
    }
+   
    public void eliminarJugador(String nombre){
        for (int i = 0; i < contaJugador; i++){
             if (jugadores[i].equals(nombre)){
@@ -57,8 +64,27 @@ public class Seleccion {
        contaJugador --;
    }    
    
-   public void buscarJugador(){}
-   public void buscarPorCamisa(){}
+   public int buscarJugador(String nombre){
+       for(int i = 0; i < contaJugador; i++){
+           if (jugadores[i].equals(nombre)){
+               return i;
+           }
+       }
+       return -1;
+   }
+   
+   public boolean existeJugador(String nombre){
+       for (int i = 0; i < contaJugador; i++){
+            if (jugadores[i].equals(nombre)){
+                return true;
+            }
+       }
+       return false;
+   }
+   
+   public int contarJugador(){
+       return contaJugador;
+   }
    
    public Seleccion(String nombre, String grupo, int entrenadores ) {
         this.nombre = nombre;
