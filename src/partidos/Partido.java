@@ -75,15 +75,12 @@ public class Partido {
     
        public void eliminarArbitro(String nombre) {
         for (int i = 0; i < contador; i++) {
-
             if (arbitro[i].getNombre().equals(nombre)) {
-
-                for (int j = i; j < contador - 1; j++) {
-                    arbitro[j] = arbitro[j + 1];
-                }
-
-                arbitro[contador - 1] = null;
-                contador--;
+            for (int j = i; j < contador - 1; j++) {
+                arbitro[j] = arbitro[j + 1];
+            }
+            arbitro[contador - 1] = null;
+            contador--;
                 break;
             }
         }
